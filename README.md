@@ -4,7 +4,7 @@
 
 Meal Your Goals
 
-##Project Description
+#Project Description
 
 Create a meal planning app that suggests recipes based on ingredients and provides nutritional information for each recipe. 
 
@@ -12,7 +12,7 @@ Create a meal planning app that suggests recipes based on ingredients and provid
 
 As a busy individual who wants to eat healthier and save time, I want a meal planning app that suggests recipes based on the ingredients I have and provides nutritional information for each recipe, so that I can easily plan nutritious meals and make informed choices without having to search for recipes or calculate nutritional values manually.
 
-##Acceptance Criteria
+#Acceptance Criteria
 
 Ingredient-Based Recipe Suggestions
 
@@ -38,11 +38,11 @@ The app should let me set dietary preferences and restrictions (e.g., vegetarian
 My profile should allow me to save favorite recipes and track my weekly nutritional goals based on meal plans.
 
 
-##Wireframe or sketch of the design
+#Wireframe or sketch of the design
 
 
 
-##APIs to be used
+#APIs to be used
 
 Recipe API (Edamam or Spoonacular) to fetch recipes based on ingredients. 
 
@@ -53,7 +53,7 @@ Nutrition API (USDA FoodData Central or Nutrionix) to calculate nutritional valu
 The app could recommend recipes based on my past selections or dietary goals (e.g., weight loss, muscle gain).
 I should be able to give feedback on recipes, allowing the app to improve future suggestions.
 
-##Rough breakdown of tasks
+#Rough breakdown of tasks
 
 Liz and Dominic work on HTML
 
