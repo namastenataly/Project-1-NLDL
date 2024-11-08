@@ -44,56 +44,6 @@
   </div>
 </section>
 
-<!-- MAIN CONTENT -->
-<main class="columns box mx-3">
-  <!-- Side menu -->
-  <article class="column is-one-fifth">
-    <aside class="menu has-text-centered">
-      <p class="menu-label is-size-4">Your Menu!</p>
-      <ul class="menu-list"></ul>
-      <div class="spacer">
-        <p>Favorites</p>
-        <ul class="menu-list" id="favorites"></ul>
-      </div>
-
-      <div class="spacer">
-        <p>Your requested recipes will show here:</p>
-      </div>
-      <ul class="menu-list" id="recipe-buttons"></ul>
-    </aside>
-  </article>
-
-  <!-- Recipe info -->
-  <article class="column is-two-fifths">
-    <div style="text-align: center">
-      <h1 id="recipe-name"></h1>
-      <button
-        class="button is-invisible is-small has-text-black mt-2"
-        id="fav-button"
-      >
-        Favorite
-      </button>
-    </div>
-    <div id="recipe-ingredients"></div>
-    <div id="recipe-info"></div>
-  </article>
-
-  <!-- Recipe images and videos -->
-  <article class="column is-two-fifths">
-    <div id="recipe-info-container">
-      <img id="recipe-picture" />
-      <iframe
-        class="has-ratio is-flex-direction-row is-flex-grow-1"
-        src=""
-        frameborder="0"
-        allowfullscreen
-        id="yt-video"
-      ></iframe>
-      <div id="recipe-summary"></div>
-    </div>
-  </article>
-</main>
-
 <!-- MODAL -->
 <section class="modal" id="search-modal">
   <div class="modal-background"></div>
@@ -151,6 +101,58 @@ id="close-modal"
 aria-label="close"
 ></button>
 </section>
+
+<!-- MAIN CONTENT -->
+<main class="columns box mx-3">
+  <!-- Side menu -->
+  <article class="column is-one-fifth">
+    <aside class="menu has-text-centered">
+      <p class="menu-label is-size-4">Your Menu!</p>
+      <ul class="menu-list"></ul>
+      <div class="spacer">
+        <p>Favorites</p>
+        <ul class="menu-list" id="favorites"></ul>
+      </div>
+
+      <div class="spacer">
+        <p>Your requested recipes will show here:</p>
+      </div>
+      <ul class="menu-list" id="recipe-buttons"></ul>
+    </aside>
+  </article>
+
+  <!-- Recipe info -->
+  <article class="column is-two-fifths">
+    <div style="text-align: center">
+      <h1 id="recipe-name"></h1>
+      <button
+        class="button is-invisible is-small has-text-black mt-2"
+        id="fav-button"
+      >
+        Favorite
+      </button>
+    </div>
+    <div id="recipe-ingredients"></div>
+    <div id="recipe-info"></div>
+  </article>
+
+  <!-- Recipe images and videos -->
+  <article class="column is-two-fifths">
+    <div id="recipe-info-container">
+      <img id="recipe-picture" />
+      <iframe
+        class="has-ratio is-flex-direction-row is-flex-grow-1"
+        src=""
+        frameborder="0"
+        allowfullscreen
+        id="yt-video"
+      ></iframe>
+      <div id="recipe-summary"></div>
+    </div>
+  </article>
+</main>
+
+
 
   <footer><strong>Made by the Meal Your Goals Team</strong></footer>
 </body>
