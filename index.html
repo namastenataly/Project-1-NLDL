@@ -9,19 +9,149 @@
 <body>
   <!--Navbar-->
   <header>
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+
       <div class="navbar-brand">
         <h1>Meal Your Goals</h1>
       </div>
       <div class="navbar-menu">
+        <div class="navbar-start">
         <a id="homePage">Home</a>
         <a class="navbar-item">Pick your Meals to Meet your Goals</a>
         <div class="navbar-item has-dropdown is-hoverable">
-          <a id="mode-toggle" class="button is-light">🌙</a>
+          <a class="navbar-link">More</a>
+          <div class="navbar-dropdown">
+            <a id="aboutUsPage" class="navbar-item">About Us</a>
+                  <a id="contactPage" class="navbar-item">Contact</a>
+                  <hr class="navbar-divider" />
+                  <a class="navbar-item more-button">Report an issue</a>
+          <a id="mode-toggle" class="
+          
+          
+          button is-light">🌙</a>
         </div>
       </div>
     </nav>
   </header>
-  <footer></footer>
+<!-- HERO SECTION -->
+<section class="hero-box">
+  <div class="container">
+    <div class="columns is-vcentered">
+      <div class="column">
+        <h2 class="title">🍱 Meal Your Goals 🍱</h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<main class="columns box mx-3">
+  <!-- Side menu -->
+  <article class="column is-one-fifth">
+    <aside class="menu has-text-centered">
+      <p class="menu-label is-size-4">Your Menu!</p>
+      <ul class="menu-list"></ul>
+      <div class="spacer">
+        <p>Favorites</p>
+        <ul class="menu-list" id="favorites"></ul>
+      </div>
+
+      <div class="spacer">
+        <p>Your requested recipes will show here:</p>
+      </div>
+      <ul class="menu-list" id="recipe-buttons"></ul>
+    </aside>
+  </article>
+
+  <!-- Recipe info -->
+  <article class="column is-two-fifths">
+    <div style="text-align: center">
+      <h1 id="recipe-name"></h1>
+      <button
+        class="button is-invisible is-small has-text-black mt-2"
+        id="fav-button"
+      >
+        Favorite
+      </button>
+    </div>
+    <div id="recipe-ingredients"></div>
+    <div id="recipe-info"></div>
+  </article>
+
+  <!-- Recipe images and videos -->
+  <article class="column is-two-fifths">
+    <div id="recipe-info-container">
+      <img id="recipe-picture" />
+      <iframe
+        class="has-ratio is-flex-direction-row is-flex-grow-1"
+        src=""
+        frameborder="0"
+        allowfullscreen
+        id="yt-video"
+      ></iframe>
+      <div id="recipe-summary"></div>
+    </div>
+  </article>
+</main>
+
+<!-- MODAL -->
+<section class="modal" id="search-modal">
+  <div class="modal-background"></div>
+  <div class="modal-content has-background-black">
+    <form id="search-form">
+      <!-- Select Menu -->
+      <article class="field">
+        <label class="label has-text-primary">Search Options</label>
+        <div class="control">
+          <div class="select">
+            <select id="search-select">
+              <option>By Recipe Name</option>
+              <option>By Ingredient</option>
+            </select>
+          </div>
+        </div>
+      </article>
+
+      <!-- Input field -->
+      <article class="field">
+        <label class="label has-text-primary">Search Here:</label>
+        <div class="control" id="form-inputs">
+          <input class="input"
+          type="text"
+          placeholder="What would you like to cook today?"
+          id="input-ingredient"
+        />
+      </div>
+
+      <div id="ing-button-div" class="is-invisible">
+        <button
+          class="button has-text-black mb-5"
+          id="add-ingredient-button"
+        >
+          Add Ingredient
+        </button>
+      </div>
+    </article>
+
+    <!-- Submit/Close buttons -->
+    <article class="field is-grouped">
+      <div class="control">
+        <button class="button is-link has-text-black">Submit</button>
+      </div>
+      <div class="control">
+        <button class="button is-link has-text-black" id="close-form">
+          Cancel
+        </button>
+      </div>
+    </article>
+  </form>
+</div>
+<button class="modal-close is-large"
+id="close-modal"
+aria-label="close"
+></button>
+</section>
+
+  <footer><strong>Made by the Meal Your Goals Team</strong></footer>
 </body>
 </html>
