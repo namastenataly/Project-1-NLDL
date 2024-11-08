@@ -149,8 +149,8 @@ header > .box,
 
 h2.title {
   color: var(--dark-color);
-  font-size: 5rem;
-  font-weight: 100;
+  font-size: 3rem;
+  font-weight: 80;
 }
 
 .inverted-colors h2.title {
