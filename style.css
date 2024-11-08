@@ -1,12 +1,333 @@
+:root {
+  --primary-color: #b5c18e;
+  --secondary-color: #f7dcb9;
+  --accent-color: #deac80;
+  --dark-color: #b99470;
+  --dark0: #6280d1;
+  --dark1: #203a5e;
+  --dark2: #223949;
+}
+
+/* UNIVERSAL/MAIN SELECTOR STYLING */
+html,
 body {
-  background: lightblue;
+  height: auto;
+  font-family: "Arvo", sans-serif;
+  color: var(--dark-color);
+  overflow: auto;
+}
+
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("./hero.jpg");
+  background-size: auto;
+}
+
+/* Manually adding fonts in that have been downloaded locally */
+@font-face {
+  font-family: "cheese";
+  src: url(cheese.otf);
+}
+
+@font-face {
+  font-family: "Gula";
+  src: url(Gula.ttf);
+}
+
+.inverted-colors img {
+  filter: none;
+  mix-blend-mode: normal;
+}
+
+/* HEADER/NAVBAR STYLING */
+header > .box,
+.navbar {
+  background-color: white;
+  padding: 0px;
 }
 
 .navbar {
-  background: linear-gradient(#e66465, #9198e5);
   padding: 10px 20px;
+}
+
+.navbar-item {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-right: 30px;
+}
+
+#gitPage {
+  color: black;
+  font-weight: 600;
 }
 
 .navbar-brand {
   text-align: center;
+}
+
+.navbar-start {
+  text-align: center;
+  justify-content: center;
+}
+
+.menu-label {
+  font-size: 1.25rem;
+}
+
+.navbar-item,
+.menu-list li a {
+  background-color: transparent;
+  color: black;
+  padding: 8px 12px;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.navbar-dropdown .navbar-item {
+  color: rgb(255, 255, 255);
+}
+
+.navbar-dropdown .navbar-item.more-button {
+  color: white !important;
+}
+
+.button {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--dark-color);
+}
+
+/* Inverted colour selectors for nav */
+.inverted-colors .button {
+  background-color: white;
+  color: black !important;
+}
+
+.inverted-colors .menu-list li a {
+  background-color: transparent;
+  color: white;
+}
+
+.inverted-colors .navbar-item #modal-button {
+  color: white;
+}
+
+/* Modal Stlying */
+#search-form {
+  border: black solid 1.5rem;
+  border-radius: 2rem;
+  background-color: black;
+}
+
+/* HERO SECTION STYLING */
+.hero {
+  background-color: var(--secondary-color);
+  color: var(--dark-color);
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-box {
+  background-color: white;
+  padding: 20px 0px;
+  border-radius: 10px;
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto 20px;
+}
+
+h2.title {
+  color: var(--dark-color);
+  font-size: 5rem;
+  font-weight: 100;
+}
+
+.inverted-colors h2.title {
+  color: white;
+}
+
+/* MAIN CONTENT STYLING */
+.columns {
+  max-width: 99%;
+}
+
+.box {
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.spacer {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+#carousel-row {
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  margin: auto;
+}
+
+#recipe-info-container p #modal-button {
+  color: black;
+}
+
+.inverted-colors #recipe-info-container,
+.inverted-colors #carousel-row,
+.inverted-colors
+  *:not(img):not(.modal):not(.modal-background):not(.field):not(.control):not(
+    .label
+  ):not(.checkbox):not(.has-text-primary):not(.button):not(footer):not(strong) {
+  background-color: var(--dark1);
+  color: white;
+}
+
+.inverted-colors #recipe-info-container p {
+  color: white;
+}
+
+/* Fetch/ Dynamically Created Data Display */
+#recipe-ingredients {
+  overflow: auto;
+  max-height: 300px;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-top: 5%;
+  padding-left: 30px;
+}
+
+#recipe-info {
+  overflow: auto;
+  max-height: 300px;
+  padding-left: 30px;
+}
+
+#yt-video {
+  width: 556px;
+  height: 370px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#fav-button {
+  font-weight: 600;
+}
+
+#recipe-name {
+  font-size: 250%;
+}
+
+/* CAROUSEL STYLING BELOW */
+/* Text Styling */
+h2 {
+  font-family: "cheese", Arial;
+  font-size: 4rem;
+}
+
+#recipeTitle {
+  font-family: "Gula", Arial;
+  font-size: 2.5rem;
+}
+
+/* Container Styling */
+
+.container-carousel {
+  padding: 0 1rem;
+}
+
+#recipeTitle {
+  margin: 2rem 0rem;
+}
+
+#trending {
+  margin: auto;
+  max-width: 100%;
+}
+
+.trending-slide {
+  width: 30rem;
+  height: 30rem;
+}
+
+.trending-slide-img img {
+  width: 50vw;
+  height: 30vh;
+  border-radius: 2rem;
+  object-fit: cover;
+  border: black solid 2px;
+}
+
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  display: none;
+}
+
+/* FOOTER STYLING */
+footer {
+  background-color: transparent;
+  padding: 20px;
+  text-align: center;
+  bottom: 0;
+  width: 50%;
+  margin: auto;
+}
+
+/* MEDIA QUERIES FOR RESPONSIVE LAYOUT */
+/* Media query: Mobile */
+@media (max-width: 360px) {
+  .trending-slide {
+    width: 10rem !important;
+    height: 13rem !important;
+  }
+  .trending-slide-img img {
+    width: 10rem !important;
+    height: 10rem !important;
+  }
+  #recipeTitle {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h2.title {
+    font-size: 2.5rem;
+  }
+}
+
+/* Media query: Tablet */
+@media (min-width: 370px) and (max-width: 1024px) {
+  .trending-slide {
+    width: 15rem !important;
+    height: 18rem !important;
+  }
+  .trending-slide-img img {
+    width: 15rem !important;
+    height: 15rem !important;
+  }
+  h2 {
+    font-size: 2.3rem;
+  }
+  #recipeTitle {
+    font-size: 2rem;
+  }
+  main {
+    flex-direction: row;
+  }
+  h2.title {
+    font-size: 3rem;
+  }
 }
